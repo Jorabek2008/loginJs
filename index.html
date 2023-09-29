@@ -11,23 +11,25 @@
         <div class="container-header">
             <h1>🫅</h1>
         </div>
-        <div class="container-section">
-            <a href="#" class="register">Register</a>
-            <a href="#" class="login">Login</a>
-        </div>
-        <div class="container-btn">
-            <button class="hello">Hello</button>
-            <button class="email">Email</button>
-            <button class="password">Password</button>
-            <button class="confirm-password">Confirm password</button>
-        </div>
-        <div class="container-p">
-            <input type="checkbox" id="check">
-            <p class="container-info">I accept the <a href="#" class="forget">Contact Me ?</a></p>
-        </div>
-        <div class="btn">
-            <button class="btn-submit">Register</button>
-        </div>
+        <form>
+            <div class="container-section">
+                <a href="#" class="register">Register</a>
+                <a href="#" class="login">Login</a>
+            </div>
+            <div class="container-btn">
+                <input type="text" placeholder="Enter your name" class="name" required>
+                <input type="email" placeholder="Enter your email" class="email" required>
+                <input type="text" placeholder="Enter your password" class="password" required>
+                <input type="text" placeholder="Enter your confirm password" class="confirm-password" required>
+            </div>
+            <div class="container-p">
+                <input type="checkbox" id="check">
+                <p class="container-info">I accept the <a href="#" class="forget">Contact Me ?</a></p>
+            </div>
+            <div class="btn">
+                <button class="btn-submit">Register</button>
+            </div>
+        </form>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>

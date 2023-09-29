@@ -5,12 +5,13 @@
 
 const register = document.querySelector('.register'),
     login = document.querySelector('.login'),
-    hello = document.querySelector('.hello'),
+    hello = document.querySelector('.name'),
     email = document.querySelector('.email'),
     password = document.querySelector('.password'),
     confirmPassword = document.querySelector('.confirm-password'),
     submit = document.querySelector('.btn-submit'),
-    remember = document.querySelector('.container-info')
+    remember = document.querySelector('.container-info'),
+    container = document.querySelector('.container')
 
 register.addEventListener('click', () => {
     register.classList.add('active')
@@ -35,4 +36,27 @@ login.addEventListener('click', () => {
     <p class="container-info">Remember Me <a href="#" class="forget">Forget password ?</a></p>
     `
 })
+
+let arr = [
+    {
+        name: '',
+        password1: '',
+        confirmPassword1: '',
+        email1: ''
+    }
+]
+submit.addEventListener('click', () => {
+    if(password.value == '' && confirmPassword.value == '' || password.value != confirmPassword.value){
+        alert('Password error')
+    }else if(password.value == confirmPassword.value ){
+        container.style.display = 'none'
+    }
+    console.log(arr.name = hello.value)
+    console.log(arr.password1 = password.value)
+    console.log(arr.email1 = email.value)
+    console.log(arr.confirmPassword1 = confirmPassword.value);
+})
+
+
+// a@gmail.com
 
