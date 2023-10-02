@@ -7,27 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="container-header">
-            <h1>🫅</h1>
+    <div class="conatiner">
+        <div class="container-top">
+            <h1 class="container-top-heading">🫅</h1>
+        </div>
+        <div class="midle">
+            <a href="#" class="register">Register</a>
+            <a href="#" class="login">Login</a>
         </div>
         <form>
-            <div class="container-section">
-                <a href="#" class="register">Register</a>
-                <a href="#" class="login">Login</a>
+            <div class="log">
+                <input type="email" required class="email1" placeholder="Enter your email">
+                <input type="text" required class="password1" placeholder="Enter your password">
+                <div class="confirm2">
+                    <input type="checkbox" class="checkbox">
+                    <p>I accept the <a href="#">Contact Me ?</a></p>
+                </div>
+                <div class="btn btn2">
+                    <button>Login</button>
+                </div>
             </div>
-            <div class="container-btn">
-                <input type="text" placeholder="Enter your name" class="name" required>
-                <input type="email" placeholder="Enter your email" class="email" required>
-                <input type="text" placeholder="Enter your password" class="password" required>
-                <input type="text" placeholder="Enter your confirm password" class="confirm-password" required>
-            </div>
-            <div class="container-p">
-                <input type="checkbox" id="check">
-                <p class="container-info">I accept the <a href="#" class="forget">Contact Me ?</a></p>
-            </div>
-            <div class="btn">
-                <button class="btn-submit">Register</button>
+            <div class="reg">
+                <input type="text" required class="name" placeholder="Enter your name">
+                <input type="email" require class="email" placeholder="Enter your email">
+                <input type="text" required class="password" placeholder="Enter your password">
+                <input type="text" required class="confirm-password" placeholder="Enter your confirm-password">
+                <div class="confirm1">
+                    <input type="checkbox" class="checkbox">
+                    <p>I accept the <a href="#">Contact Me ?</a></p>
+                </div>
+                <div class="btn btn1">
+                    <button>Register</button>
+                </div>
             </div>
         </form>
     </div>

@@ -1,62 +1,53 @@
-'use strict'
+const register = document.querySelector('.register')
+const login = document.querySelector('.login')
+const log = document.querySelector('.log')
+const reg = document.querySelector('.reg')
+const btn1 = document.querySelector('.btn1 button')
+const btn2 = document.querySelector('.btn2 button')
+const container = document.querySelector('.conatiner')
 
-// wqo4UBI9pXJvbSzNYYMAxK3FQZoSciS1RGhVqLKXass
-// gJbyiIBRT3nQhfxxAvzZTYIFTWhsF1YCT_ZA3F7VIyk
+const name1 = document.querySelector('.name')
+const email = document.querySelector('.email')
+const password = document.querySelector('.password')
+const confirm_password = document.querySelector('.confirm-password')
+const email1 = document.querySelector('.email1')
+const password1 = document.querySelector('.password1')
 
-const register = document.querySelector('.register'),
-    login = document.querySelector('.login'),
-    hello = document.querySelector('.name'),
-    email = document.querySelector('.email'),
-    password = document.querySelector('.password'),
-    confirmPassword = document.querySelector('.confirm-password'),
-    submit = document.querySelector('.btn-submit'),
-    remember = document.querySelector('.container-info'),
-    container = document.querySelector('.container')
 
-register.addEventListener('click', () => {
-    register.classList.add('active')
-    login.classList.remove('active')
-    hello.textContent = 'Hello'
-    email.style.display = 'block'
-    confirmPassword.style.display = 'block'
-    submit.textContent = 'Register'
-    remember.innerHTML = `
-    <p class="container-info">I accept the <a href="#" class="forget">Contact Me ?</a></p>
-    `
 
-})
 login.addEventListener('click', () => {
-    login.classList.add('active')
-    register.classList.remove('active')
-    hello.textContent = 'Username'
-    email.style.display = 'none'
-    confirmPassword.style.display = 'none'
-    submit.textContent = 'Login'
-    remember.innerHTML = `
-    <p class="container-info">Remember Me <a href="#" class="forget">Forget password ?</a></p>
-    `
+    log.classList.add('active')
+    reg.classList.add('active')
+    register.style.borderBottom = 'none'
+    login.style.borderBottom = '2px solid rgb(59, 22, 119)'
 })
+register.addEventListener('click', () => {
+    log.classList.remove('active')
+    reg.classList.remove('active')
+    register.style.borderBottom = '2px solid rgb(59, 22, 119)'
+    login.style.borderBottom = 'none'
 
-let arr = [
-    {
-        name: '',
-        password1: '',
-        confirmPassword1: '',
-        email1: ''
-    }
-]
-submit.addEventListener('click', () => {
-    if(password.value == '' && confirmPassword.value == '' || password.value != confirmPassword.value){
+})
+let a;
+let b;
+btn1.addEventListener('click', () => {
+    if(name1.value == '' || email.value == '' || password.value == '' || confirm_password.value == ''){
         alert('Password error')
-    }else if(password.value == confirmPassword.value ){
-        container.style.display = 'none'
+    }else if(password.value == confirm_password.value){
+        log.classList.add('active')
+        reg.classList.add('active')
+        login.style.borderBottom = '2px solid rgb(59, 22, 119)'
+        reg.style.display = 'none'
     }
-    console.log(arr.name = hello.value)
-    console.log(arr.password1 = password.value)
-    console.log(arr.email1 = email.value)
-    console.log(arr.confirmPassword1 = confirmPassword.value);
+})
+btn2.addEventListener('click', () => {
+    if((password.value == password1.value && email.value == email1.value) || (password1.value == '' && email1.value =='')){
+        container.style.display = 'none'
+        alert('You are successful')
+    }else{
+        alert('email or password error')
+    }
 })
 
 
-// a@gmail.com
 
